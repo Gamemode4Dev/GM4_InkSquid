@@ -14,9 +14,9 @@ public class InkSquid extends JavaPlugin {
 	@Override
 	public void onEnable(){
 		saveDefaultConfig();
-		RADIUS = getConfig().getInt("squid-radius");
-		POLL_FREQ = getConfig().getInt("poll-freq");
-		BLIND_DUR = getConfig().getInt("blind-duration");
+		RADIUS = getConfig().getInt("squid-radius", 5);
+		POLL_FREQ = getConfig().getInt("poll-freq", 80);
+		BLIND_DUR = getConfig().getInt("blind-duration", 100);
 		Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
 			public void run() {
 				for(Player p : Bukkit.getOnlinePlayers()) {

@@ -1,0 +1,8 @@
+# Number of ticks between each poll
+poll-freq: 80
+
+# Duration of blindness effect (in ticks)
+blind-duration: 100
+
+# Radius in which the player is affected by squids
+squid-radius: 5

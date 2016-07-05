@@ -2,6 +2,7 @@ package co.gm4.GM4_InkSquid;
 
 import java.util.ArrayList;
 import java.util.TimerTask;
+import java.util.UUID;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -29,7 +30,8 @@ public class SquidPoll extends TimerTask implements Runnable {
 		for(Player p : submergedplayers){
 			for(Squid s : squids){
 				if(p.getLocation().distance(s.getLocation())<5){
-					p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,120,5,false,false));
+					UUID id = p.getUniqueId();
+					Bukkit.getPlayer(id).addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,120,5,false,false));
 				}
 			}
 		}
